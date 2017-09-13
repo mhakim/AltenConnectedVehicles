@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apis</name>
+    </assembly>
+    <members>
+        <member name="M:Apis.App_Start.SimpleInjectorWebApiInitializer.Initialize">
+            <summary>Initialize the container and register it as Web API Dependency Resolver.</summary>
+        </member>
+        <member name="T:Apis.Controllers.CustomersController">
+            <summary>
+            Customers resource Controller
+            </summary>
+        </member>
+        <member name="M:Apis.Controllers.CustomersController.#ctor(Application.Interfaces.ICustomerService)">
+            <summary>
+            constructor
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Apis.Controllers.CustomersController.Get(SearchFilters.CustomerFilters)">
+            <summary>
+            get a filtered list of VehicleResource 
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:Apis.Controllers.StampsController">
+            <summary>
+            Stamps resource Controller
+            </summary>
+        </member>
+        <member name="M:Apis.Controllers.StampsController.#ctor(Application.Interfaces.IVehicleService)">
+            <summary>
+            constructor
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Apis.Controllers.StampsController.Post(System.Guid)">
+            <summary>
+            Add vehicle stamp AKA ping, network request, checkin
+            this stamp used to determine the connection ststus for vehicles
+            </summary>
+            <param name="vehicleId">
+            vehicle Id (required)
+            </param>
+        </member>
+        <member name="T:Apis.Controllers.VehiclesController">
+            <summary>
+            Vehicles resource Controller
+            </summary>
+        </member>
+        <member name="M:Apis.Controllers.VehiclesController.#ctor(Application.Interfaces.IVehicleService)">
+            <summary>
+            constructor
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Apis.Controllers.VehiclesController.Get(SearchFilters.VehicleFilters)">
+            <summary>
+            get a filtered list of VehicleResource 
+            </summary>
+            <param name="filters"></param>
+        </member>
+    </members>
+</doc>

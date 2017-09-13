@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SearchFilters</name>
+    </assembly>
+    <members>
+        <member name="T:SearchFilters.CustomerFilters">
+            <summary>
+            search criteria for reading customers
+            </summary>
+        </member>
+        <member name="P:SearchFilters.CustomerFilters.Ids">
+            <summary>
+            customers ids filters 
+            note that you can select many customers at once
+            empty list means select all
+            </summary>
+        </member>
+        <member name="P:SearchFilters.CustomerFilters.Name">
+            <summary>
+            select all customer their names contains the name filter
+            </summary>
+        </member>
+        <member name="T:SearchFilters.VehicleFilters">
+            <summary>
+            search criteria for reading vehicles
+            </summary>
+        </member>
+        <member name="P:SearchFilters.VehicleFilters.VehicleId">
+            <summary>
+            Vehicle Id filter
+            null means select all Vehicles
+            </summary>
+        </member>
+        <member name="P:SearchFilters.VehicleFilters.CustomerId">
+            <summary>
+            CustomerId filter
+            null means select vehicles for all customers
+            </summary>
+        </member>
+        <member name="P:SearchFilters.VehicleFilters.IsAlive">
+            <summary>
+            IsAlive filter
+            true means select vehicles with healty connection
+            false means select vehicles with lost connection
+            null means select all vehicles regardless of it's status 
+            </summary>
+        </member>
+    </members>
+</doc>

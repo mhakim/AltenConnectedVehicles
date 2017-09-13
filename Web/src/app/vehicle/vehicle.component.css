@@ -1,0 +1,11 @@
+.alive {
+    background-color: green;
+}
+
+.dead{
+    background-color: red;
+}
+
+*{
+    margin: 5px;
+}

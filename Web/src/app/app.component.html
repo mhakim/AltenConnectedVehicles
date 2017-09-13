@@ -1,0 +1,32 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Alten connected cars
+  </h1>
+  <h2>
+    Refresh data in {{ 15 - timer }} sec
+  </h2>
+</div>
+
+<h2>Filters</h2>
+<div>
+  <button md-button (click)="updateCustomerIdFilters(null)"> All </button>
+  <button md-button *ngFor="let c of customers" (click)="updateCustomerIdFilters(c.id)"> {{ c.name }} </button>
+</div>
+
+<div>
+  <button md-button (click)="updateAliveFilters(null)"> All </button>
+  <button md-button (click)="updateAliveFilters(true)"> Alive </button>
+  <button md-button (click)="updateAliveFilters(false)"> no connection </button>
+</div>
+
+<h2> Filters Object represented as Json</h2>
+<h2> {{filters | json}}</h2>
+<h1 *ngIf="loading"> Loading ... </h1>
+
+<div fxLayout="row" fxLayoutAlign="none" fxLayoutWrap *ngIf="!loading">
+
+  <app-vehicle *ngFor="let v of vehicles" [vehicle]="v" fxFlex="50">
+  </app-vehicle>
+
+</div>

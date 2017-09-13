@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Resources</name>
+    </assembly>
+    <members>
+        <member name="T:Resources.CustomerResource">
+            <summary>
+            Customer Resource
+            </summary>
+        </member>
+        <member name="P:Resources.CustomerResource.Id">
+            <summary>
+            customer id
+            </summary>
+        </member>
+        <member name="P:Resources.CustomerResource.Name">
+            <summary>
+            customer name
+            </summary>
+        </member>
+        <member name="P:Resources.CustomerResource.Address">
+            <summary>
+            customer address
+            </summary>
+        </member>
+        <member name="T:Resources.VehicleResource">
+            <summary>
+            Vehicle Resource representation
+            </summary>
+        </member>
+        <member name="P:Resources.VehicleResource.Id">
+            <summary>
+            Vehicle Id
+            </summary>
+        </member>
+        <member name="P:Resources.VehicleResource.VIN">
+            <summary>
+            vehicle vin also called a chassis number, is a unique code, including a serial number, used by the automotive industry to identify individual motor vehicles 
+            </summary>
+        </member>
+        <member name="P:Resources.VehicleResource.RegistrationNumber">
+            <summary>
+            Registration Number is the license plate 
+            it is established by the government.
+            </summary>
+        </member>
+        <member name="P:Resources.VehicleResource.OwnerName">
+            <summary>
+            vehicle owner
+            </summary>
+        </member>
+        <member name="P:Resources.VehicleResource.IsAlive">
+            <summary>
+            indicates wether the connection between the vehicle and the server is healthy or not
+            </summary>
+        </member>
+    </members>
+</doc>
