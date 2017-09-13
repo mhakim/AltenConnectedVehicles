@@ -20,9 +20,7 @@ namespace CarSimulator
         static void Main()
         {
             
-            timer = new System.Timers.Timer();
-            timer.Interval = 1000 * 45; //update vehicle status every 45 seconds
-            timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
+            
             start_timer();
 
             
@@ -60,6 +58,9 @@ namespace CarSimulator
         }
         private static void start_timer()
         {
+            timer = new System.Timers.Timer();
+            timer.Interval = 1000 * 45; //update vehicle status every 45 seconds
+            timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
             timer.Start();
         }
     }
