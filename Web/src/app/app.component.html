@@ -9,19 +9,35 @@
 </div>
 
 <h2>Filters</h2>
-<div>
+<!-- <div>
   <button md-button (click)="updateCustomerIdFilters(null)"> All </button>
   <button md-button *ngFor="let c of customers" (click)="updateCustomerIdFilters(c.id)"> {{ c.name }} </button>
-</div>
+</div> -->
 
-<div>
+<div class="form-group col-md-4">
+  
+                  <label for="customerName" class="control-label"><b>Customer Name: </b></label>
+  
+                      <select class="form-control" id="customerName"  name="customerName" (change)="updateCustomerIdFilters($event.target.value)">
+                          <option value="" selected="selected">All Customers</option>
+                          <option *ngFor="let c of customers; let i = index" [value]="c.id">{{c.name}}</option>
+                      </select>
+              </div>
+<br>
+              <div>
+                <label class="control-label"><B>Vehicle Status: </B></label>
+                <label> <input type="radio" name="connectedFilter" (click)="updateAliveFilters(null)" value="All Vehicles"  checked/> All </label>
+                <label> <input type="radio" name="connectedFilter" (click)="updateAliveFilters(true)" value="Alive Vehicles" /> Connected </label>
+                <label> <input type="radio" name="connectedFilter" (click)="updateAliveFilters(false)" value="Disconnected Vehicles" /> Disconnected </label>
+            </div>
+<!-- <div>
   <button md-button (click)="updateAliveFilters(null)"> All </button>
   <button md-button (click)="updateAliveFilters(true)"> Alive </button>
   <button md-button (click)="updateAliveFilters(false)"> no connection </button>
-</div>
+</div> -->
 
-<h2> Filters Object represented as Json</h2>
-<h2> {{filters | json}}</h2>
+<h2> Vehicle List</h2>
+<!-- <h2> {{filters | json}}</h2> -->
 <h1 *ngIf="loading"> Loading ... </h1>
 
 <div fxLayout="row" fxLayoutAlign="none" fxLayoutWrap *ngIf="!loading">
